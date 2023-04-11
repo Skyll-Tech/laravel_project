@@ -17,3 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/home','App\Http\Controllers\ClientController@home');
+Route::get('/apropos','App\Http\Controllers\ClientController@apropos');
+Route::get('/categorie','App\Http\Controllers\ClientController@categorie');
+Route::get('/contact','App\Http\Controllers\ClientController@contact');
+Route::get('/special','App\Http\Controllers\ClientController@special');
