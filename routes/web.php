@@ -21,3 +21,5 @@ Route::get('/apropos','App\Http\Controllers\ClientController@apropos');
 Route::get('/categorie','App\Http\Controllers\ClientController@categorie');
 Route::get('/contact','App\Http\Controllers\ClientController@contact');
 Route::get('/special','App\Http\Controllers\ClientController@special');
+Route::get('/logi','App\Http\Controllers\ClientController@login');
+Route::get('/register','App\Http\Controllers\ClientController@register');

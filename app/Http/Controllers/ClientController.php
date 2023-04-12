@@ -36,4 +36,18 @@ class ClientController extends Controller
 
  /* special controller */
 
+
+ public function login(){
+    return view('client.login');
+}
+
+  /* login controller */
+
+
+   public function register(){
+    return view('client.register');
+}
+
+  /* register controller */
+
 }
