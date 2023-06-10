@@ -17,27 +17,10 @@
         <li><a href="{{URL::to('/home')}}">Home</a></li>
         <li><a href="{{URL::to('/apropos')}}">Apropos</a></li>
         <li><a href="{{URL::to('/services')}}">Services</a></li>
-        <li><a href="{{URL::to('/save')}}">nouveau produit</a></li>
     </ul>
 
 {{--Debut du contenu--}}
-<h1>Bienvenu dans la page services</h1>
-@foreach ($produits as $produit)
-
-<div class="well">
-       <a href="/show/{{$produit->id}}"> {{$produit->product_name}}</a>
-</div>
-<h2>les details des produits</h2>
-<h5>{{$produit->product_name}}</h5>
-<h5>{{$produit->product_price}} fcfa</h5>
-<h5>{{$produit->description}}</h5>
-@endforeach
-{{$produits->links()}}
-
-<hr>
-<hr>
-<a href="/edit/{{$produit->id}}" class="btn btn-default border">Editer</a>
-<a href="" class="btn btn-danger border">supprimer</a>
+<h1>detail du produit</h1>
 
 {{--fin du contenu--}}
 

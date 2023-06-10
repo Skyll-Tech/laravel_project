@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Session;
+use App\Models\Product;
 
 class ClientController extends Controller
 {
     public function home(){
-        return view('client.home');
+        $produits = product::orderBy('product_name','desc')->paginate(2);
+        return view('client.home')->with('produits',$produits);
     }
 
     /* home controller */
@@ -49,5 +52,29 @@ class ClientController extends Controller
 }
 
   /* register controller */
+
+public function show($id){
+    print('ID du produit est'.$id);
+}
+public function save(){
+    return view('client.creer');
+}
+public function creerproduit(Request $request){
+    $produit = New product();
+
+
+    $produit->product_name = $request->product_name;
+    $produit->product_price = $request->product_price;
+    $produit->description = $request->product_description;
+
+    $produit->save();
+    Session::put('message','le produit '.$request->product_name.' a été inséré avec succès');
+    return redirect('/save');
+}
+public function edit(){
+    return view('client.edit');
+
+}
+
 
 }

@@ -6,7 +6,7 @@
 
 
 
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" action="">
 					<span class="login100-form-title">
 						Creer un Compte
 					</span>
@@ -44,7 +44,7 @@
 					</div>
 
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
+						<button type="submit" class="login100-form-btn">
 							Creer
 						</button>
 					</div>
