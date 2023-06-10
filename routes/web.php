@@ -23,3 +23,11 @@ Route::get('/contact','App\Http\Controllers\ClientController@contact');
 Route::get('/special','App\Http\Controllers\ClientController@special');
 Route::get('/logi','App\Http\Controllers\ClientController@login');
 Route::get('/register','App\Http\Controllers\ClientController@register');
+Route::get('/page/{id}','App\Http\Controllers\ClientController@show');
+ Route::get('/save','App\Http\Controllers\ClientController@save');
+Route::post('/saveproduit','App\Http\Controllers\ClientController@creerproduit');
+Route::get('/edit','App\Http\Controllers\ClientController@edit');
+Route::post('/modifierproduit','App\Http\Controllers\ClientController@modifierproduit');
+
+
+Route::resource('/products','ProductController');

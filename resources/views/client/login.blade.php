@@ -27,7 +27,7 @@
 						</span>
 					</div>
 
-					<div class="container-login100-form-btn">
+					<div class="container-login100-form-btn">exit
 						<button class="login100-form-btn">
 							connexion
 						</button>
